@@ -4,9 +4,12 @@ Thanks for helping. This file covers setup, the kinds of changes we are looking 
 
 ## Setup
 
+Fork the repository on GitHub first. You push to your fork, not to this one.
+
 ```sh
-git clone https://github.com/afrigov/afrigov
+git clone https://github.com/<your-username>/afrigov
 cd afrigov
+git remote add upstream https://github.com/afrigov/afrigov
 pnpm install
 pnpm exec playwright install chromium   # once, for the accessibility tests
 pnpm check                              # lint, format, build, unit tests
@@ -66,6 +69,7 @@ Always welcome. Small PRs merge fastest.
 
 ## Pull request checklist
 
+- Push your branch to your fork, then open a pull request against `afrigov/afrigov` `main`. CI runs on the pull request; the first one from a new contributor waits for a maintainer to approve the run.
 - `pnpm check` and `pnpm test:a11y` pass.
 - New behaviour has a test. Bug fixes have a test that fails without the fix.
 - `CHANGELOG.md` has a line under **Unreleased**.
