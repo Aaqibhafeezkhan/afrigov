@@ -6,6 +6,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Fixed
+
+- **Kenya flag artwork.** Replace the approximate shield and spears in `ke.svg` with a compact vector based on the public-domain [Flag of Kenya (shield) artwork by Eusebius](https://commons.wikimedia.org/wiki/File:Flag_of_Kenya_(shield).svg).
+
 ## [0.16.0] - 2026-10-08
 
 ### Added
