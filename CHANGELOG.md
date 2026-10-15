@@ -6,6 +6,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- Senegal pack: document the national identification number on the reverse of the CEDEAO card (#13).
+
 ## [0.16.0] - 2026-10-08
 
 ### Added
