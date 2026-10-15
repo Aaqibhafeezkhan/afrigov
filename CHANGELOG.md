@@ -6,6 +6,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- **Tanzania country pack (`tz.css`).** Adds Tanzania's national flag and an original 3:2 SVG drawn from the statutory design, English official-website banner strings, a machine-assisted Kiswahili draft marked for native review, TZS currency, NIN details, +255 phone information and sample regions. Colour-name sources are cited in the pack.
+
 ## [0.16.0] - 2026-10-08
 
 ### Added
