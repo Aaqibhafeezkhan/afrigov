@@ -9,6 +9,7 @@
       "domain": ".gouv.sn",
       "language": "fr",
       "flag": ["{official.green}", "{official.yellow}", "{official.red}"],
+      "flagSvg": "sn.svg",
       "flagDirection": "row",
       "strings": {
         "fr": {
