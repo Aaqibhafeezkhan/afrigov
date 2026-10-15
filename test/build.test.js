@@ -139,7 +139,7 @@ describe("flag SVGs in dist", () => {
   it("Ghana's flag is published next to its stylesheet and referenced from it", () => {
     expect(existsSync(dist("flags/gh.svg"))).toBe(true);
     expect(read("gh.css")).toContain('--ag-flag-image: url("flags/gh.svg")');
-    expect(read("sn.css")).not.toContain("--ag-flag-image");
+    expect(read("ng.css")).not.toContain("--ag-flag-image");
   });
 
   it("inline flags on the packs page never inherit another pack's image", () => {
