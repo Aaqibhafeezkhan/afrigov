@@ -41,9 +41,10 @@
         "name": "Numéro d'identification nationale",
         "short": "NIN",
         "document": "Carte nationale d'identité CEDEAO",
-        "hint": "Au recto de votre carte d'identité CEDEAO",
-        "authority": "la Direction de l'automatisation des fichiers",
-        "$note": "Digit count and format wanted from a contributor who holds the card."
+        "hint": "13 ou 14 chiffres, au verso de votre carte d'identité CEDEAO",
+        "length": 14,
+        "pattern": "[0-9]{13,14}",
+        "authority": "la Direction de l'automatisation des fichiers"
       },
       "regions": {
         "label": "Région",
