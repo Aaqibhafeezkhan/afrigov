@@ -8,8 +8,7 @@
   </defs>
   <g transform="translate(1.5 1) scale(.0125)">
     <g id="spear">
-      <use href="#spearshape" fill="#000"/>
-      <use href="#spearshape" fill="#fff" transform="scale(.72)"/>
+      <use href="#spearshape" fill="#fff" stroke="#000" stroke-width=".5"/>
     </g>
     <use href="#spear" transform="scale(-1 1)"/>
     <path d="M-19 24c3 8 13 24 19 24s16-16 19-24V-24c-3-8-13-24-19-24s-16 16-19 24z" fill="#bb0000" stroke="#000" stroke-width="1.5"/>
