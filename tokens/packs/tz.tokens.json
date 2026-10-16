@@ -1,0 +1,84 @@
+{
+  "$schema": "./pack.schema.json",
+  "$description": "Tanzania pack. Overrides core colour tokens with the national colours and carries official-website banner strings.",
+  "$extensions": {
+    "afrigov": {
+      "code": "tz",
+      "country": "Tanzania",
+      "government": "United Republic of Tanzania",
+      "domain": ".go.tz",
+      "flag": ["{official.green}", "{official.gold}", "{official.black}", "{official.gold}", "{official.blue}"],
+      "flagDirection": "column",
+      "flagSvg": "tz.svg",
+      "strings": {
+        "en": {
+          "banner": "An official website of the Government of the United Republic of Tanzania",
+          "banner-how": "How you know this is official",
+          "banner-domain": "Official websites use .go.tz",
+          "banner-secure": "Secure .go.tz websites use HTTPS"
+        },
+        "sw": {
+          "banner": "Tovuti rasmi ya Serikali ya Jamhuri ya Muungano wa Tanzania",
+          "banner-how": "Jinsi ya kujua kuwa hii ni rasmi",
+          "banner-domain": "Tovuti rasmi hutumia .go.tz",
+          "banner-secure": "Tovuti salama za .go.tz hutumia HTTPS",
+          "$note": "Machine-assisted draft. Native review wanted."
+        }
+      },
+      "currency": {
+        "code": "TZS",
+        "symbol": "TSh",
+        "name": "shillings",
+        "hint": "In Tanzanian shillings"
+      },
+      "id": {
+        "name": "National Identification Number",
+        "short": "NIN",
+        "document": "National ID card",
+        "hint": "20 digits on your National ID card",
+        "length": 20,
+        "authority": "the National Identification Authority (NIDA)"
+      },
+      "regions": {
+        "label": "Region",
+        "choose": "Choose a region",
+        "items": ["Arusha", "Dar es Salaam", "Dodoma", "Mbeya", "Morogoro", "Mwanza", "Kilimanjaro", "Tanga"]
+      },
+      "phone": {
+        "code": "+255",
+        "example": "0712 345 678",
+        "hint": "We will send a code by SMS. For example, 0712 345 678",
+        "length": 10
+      },
+      "examples": {
+        "timezone": "East Africa Time",
+        "refPrefix": "TZ"
+      }
+    }
+  },
+  "official": {
+    "$type": "color",
+    "$description": "National flag colours and design follow the First Schedule to the National Emblems Act, Cap. 10, R.E. 2023 (Office of the Solicitor General, Government of Tanzania: https://elibrary.osg.go.tz/items/778cd5d7-0edb-4aae-8c88-c67f2bd70748). The Act specifies green, blue, black and gold; the hex values below are approximate digital renderings because the public statutory text names colours without specifying RGB or hex values.",
+    "green": {
+      "$value": "#1eb53a"
+    },
+    "blue": {
+      "$value": "#00a3dd"
+    },
+    "black": {
+      "$value": "#000000"
+    },
+    "gold": {
+      "$value": "#fcd116"
+    }
+  },
+  "color": {
+    "$type": "color",
+    "primary": {
+      "$value": "{official.green}"
+    },
+    "accent": {
+      "$value": "{official.gold}"
+    }
+  }
+}
