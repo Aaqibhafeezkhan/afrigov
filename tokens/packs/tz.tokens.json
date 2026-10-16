@@ -7,13 +7,7 @@
       "country": "Tanzania",
       "government": "United Republic of Tanzania",
       "domain": ".go.tz",
-      "flag": [
-        "{official.green}",
-        "{official.gold}",
-        "{official.black}",
-        "{official.gold}",
-        "{official.blue}"
-      ],
+      "flag": ["{official.green}", "{official.gold}", "{official.black}", "{official.gold}", "{official.blue}"],
       "flagDirection": "column",
       "flagSvg": "tz.svg",
       "strings": {
@@ -38,27 +32,17 @@
         "hint": "In Tanzanian shillings"
       },
       "id": {
-        "name": "National Identification Number (NIN)",
+        "name": "National Identification Number",
         "short": "NIN",
         "document": "National ID card",
-        "hint": "20 digits in 8-5-5-2 groups, separated by hyphens, on your National ID card",
-        "length": 23,
-        "pattern": "[0-9]{8}-[0-9]{5}-[0-9]{5}-[0-9]{2}",
+        "hint": "20 digits on your National ID card",
+        "length": 20,
         "authority": "the National Identification Authority (NIDA)"
       },
       "regions": {
         "label": "Region",
         "choose": "Choose a region",
-        "items": [
-          "Arusha",
-          "Dar es Salaam",
-          "Dodoma",
-          "Mbeya",
-          "Morogoro",
-          "Mwanza",
-          "Kilimanjaro",
-          "Tanga"
-        ]
+        "items": ["Arusha", "Dar es Salaam", "Dodoma", "Mbeya", "Morogoro", "Mwanza", "Kilimanjaro", "Tanga"]
       },
       "phone": {
         "code": "+255",
@@ -74,7 +58,7 @@
   },
   "official": {
     "$type": "color",
-    "$description": "National flag colours and design follow the First Schedule to the National Emblems Act, Cap. 10, R.E. 2023 (Office of the Solicitor General, Government of Tanzania: https://elibrary.osg.go.tz/items/778cd5d7-0edb-4aae-8c88-c67f2bd70748). The Tanzania Bureau of Standards lists TZS 1:2018(E), National flag of Tanzania - Specifications, as a compulsory standard (https://www.tbs.go.tz/uploads/files/LIST%20OF%20COMPULSORY%20TANZANIA%20STANDARD.pdf). The Act specifies green, blue, black and gold; the hex values below are approximate digital renderings because the public statutory text names colours without specifying RGB or hex values.",
+    "$description": "National flag colours and design follow the First Schedule to the National Emblems Act, Cap. 10, R.E. 2023 (Office of the Solicitor General, Government of Tanzania: https://elibrary.osg.go.tz/items/778cd5d7-0edb-4aae-8c88-c67f2bd70748). The Act specifies green, blue, black and gold; the hex values below are approximate digital renderings because the public statutory text names colours without specifying RGB or hex values.",
     "green": {
       "$value": "#1eb53a"
     },

@@ -10,6 +10,15 @@ All notable changes to this project are documented here. The format follows
 
 - **Tanzania country pack (`tz.css`).** Adds Tanzania's national flag and an original 3:2 SVG drawn from the statutory design, English official-website banner strings, a machine-assisted Kiswahili draft marked for native review, TZS currency, NIN details, +255 phone information and sample regions. Colour-name sources are cited in the pack.
 
+### Changed
+
+- Senegal pack: document the national identification number on the reverse of the CEDEAO card (#13).
+
+### Fixed
+
+- **Senegal flag artwork.** Add the green five-pointed star to the centre of the yellow band with a compact, hand-drawn SVG.
+- **Kenya flag artwork.** Replace the approximate shield and spears in `ke.svg` with a compact vector based on the public-domain [Flag of Kenya (shield) artwork by Eusebius](https://commons.wikimedia.org/wiki/File:Flag_of_Kenya_(shield).svg).
+
 ## [0.16.0] - 2026-10-08
 
 ### Added

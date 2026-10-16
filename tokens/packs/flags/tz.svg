@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 2" role="img" aria-label="Flag of Tanzania">
   <rect width="3" height="2" fill="#1eb53a"/>
   <path d="M0 2 3 0V2Z" fill="#00a3dd"/>
-  <path d="M-0.1 2.07 3.1 -0.07" fill="none" stroke="#fcd116" stroke-width="0.24" stroke-linecap="butt"/>
-  <path d="M-0.1 2.07 3.1 -0.07" fill="none" stroke="#000000" stroke-width="0.12" stroke-linecap="butt"/>
+  <path d="M-0.1 2.07 3.1 -0.07" fill="none" stroke="#fcd116" stroke-width="0.792" stroke-linecap="butt"/>
+  <path d="M-0.1 2.07 3.1 -0.07" fill="none" stroke="#000000" stroke-width="0.542" stroke-linecap="butt"/>
 </svg>
