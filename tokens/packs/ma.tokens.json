@@ -22,10 +22,9 @@
         },
         "fr": {
           "banner": "Un site officiel du Royaume du Maroc",
-          "banner-how": "Comment savoir que ce site est officiel",
+          "banner-how": "Comment reconnaître un site officiel",
           "banner-domain": "Les sites officiels utilisent .gov.ma",
-          "banner-secure": "Les sites .gov.ma sécurisés utilisent HTTPS",
-          "$note": "Drafted by a non-native speaker. Native review wanted."
+          "banner-secure": "Les sites .gov.ma sécurisés utilisent HTTPS"
         },
         "en": {
           "banner": "An official website of the Kingdom of Morocco",
