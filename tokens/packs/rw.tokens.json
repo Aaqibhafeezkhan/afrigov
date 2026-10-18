@@ -20,10 +20,9 @@
         },
         "fr": {
           "banner": "Un site officiel du Gouvernement du Rwanda",
-          "banner-how": "Comment savoir que ce site est officiel",
+          "banner-how": "Comment reconnaître un site officiel",
           "banner-domain": "Les sites officiels utilisent .gov.rw",
-          "banner-secure": "Les sites .gov.rw sécurisés utilisent HTTPS",
-          "$note": "Drafted by a non-native speaker. Native review wanted."
+          "banner-secure": "Les sites .gov.rw sécurisés utilisent HTTPS"
         },
         "rw": {
           "banner": null,
