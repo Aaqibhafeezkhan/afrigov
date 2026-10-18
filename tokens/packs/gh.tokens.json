@@ -7,7 +7,11 @@
       "country": "Ghana",
       "government": "Republic of Ghana",
       "domain": ".gov.gh",
-      "flag": ["{official.red}", "{official.gold}", "{official.green}"],
+      "flag": [
+        "{official.red}",
+        "{official.gold}",
+        "{official.green}"
+      ],
       "flagDirection": "column",
       "flagSvg": "gh.svg",
       "strings": {
@@ -18,10 +22,11 @@
           "banner-secure": "Secure .gov.gh websites use HTTPS"
         },
         "ak": {
-          "banner": "Ghana aban no wɛbsaet a wɔagye atom.",
-          "banner-how": "Wobɛyɛ dɛn ahu sɛ eyi yɛ aban de?",
-          "banner-domain": "Aban wɛbsaet ahorow de .gov.gh na ɛdi dwuma.",
-          "banner-secure": "Wɛbsaet a ahobammɔ wɔ mu a ɛde .gov.gh no de HTTPS na ɛdi dwuma."
+          "banner": "Ghana aban no wɛbsaet a wɔagye atom",
+          "banner-how": "Wobɛyɛ dɛn ahu sɛ eyi yɛ aban de",
+          "banner-domain": "Aban wɛbsaet ahorow de .gov.gh na ɛdi dwuma",
+          "banner-secure": "Wɛbsaet a ahobammɔ wɔ mu a ɛde HTTPS na ɛdi dwuma",
+          "$note": "Machine-assisted draft. Native review wanted."
         },
         "ee": {
           "banner": null,
@@ -68,22 +73,87 @@
           "label": "District",
           "choose": "Choose a district",
           "items": {
-            "Ahafo": ["Asunafo North", "Tano North", "Tano South"],
-            "Ashanti": ["Kumasi Metropolitan", "Obuasi Municipal", "Ejisu"],
-            "Bono": ["Sunyani Municipal", "Dormaa Central", "Wenchi"],
-            "Bono East": ["Techiman Municipal", "Kintampo North", "Nkoranza South"],
-            "Central": ["Cape Coast Metropolitan", "Mfantseman", "Komenda-Edina-Eguafo-Abirem"],
-            "Eastern": ["New Juaben South", "Kwahu West", "Suhum"],
-            "Greater Accra": ["Accra Metropolitan", "Tema Metropolitan", "Ga East", "Ledzokuku"],
-            "North East": ["East Mamprusi", "West Mamprusi", "Chereponi"],
-            "Northern": ["Tamale Metropolitan", "Savelugu", "Yendi"],
-            "Oti": ["Krachi East", "Nkwanta South", "Jasikan"],
-            "Savannah": ["West Gonja", "East Gonja", "Bole"],
-            "Upper East": ["Bolgatanga Municipal", "Bawku Municipal", "Kassena-Nankana Municipal"],
-            "Upper West": ["Wa Municipal", "Lawra", "Sissala East"],
-            "Volta": ["Ho Municipal", "Keta", "Hohoe"],
-            "Western": ["Sekondi-Takoradi", "Tarkwa-Nsuaem", "Ahanta West"],
-            "Western North": ["Sefwi Wiawso", "Aowin", "Bibiani-Anhwiaso-Bekwai"]
+            "Ahafo": [
+              "Asunafo North",
+              "Tano North",
+              "Tano South"
+            ],
+            "Ashanti": [
+              "Kumasi Metropolitan",
+              "Obuasi Municipal",
+              "Ejisu"
+            ],
+            "Bono": [
+              "Sunyani Municipal",
+              "Dormaa Central",
+              "Wenchi"
+            ],
+            "Bono East": [
+              "Techiman Municipal",
+              "Kintampo North",
+              "Nkoranza South"
+            ],
+            "Central": [
+              "Cape Coast Metropolitan",
+              "Mfantseman",
+              "Komenda-Edina-Eguafo-Abirem"
+            ],
+            "Eastern": [
+              "New Juaben South",
+              "Kwahu West",
+              "Suhum"
+            ],
+            "Greater Accra": [
+              "Accra Metropolitan",
+              "Tema Metropolitan",
+              "Ga East",
+              "Ledzokuku"
+            ],
+            "North East": [
+              "East Mamprusi",
+              "West Mamprusi",
+              "Chereponi"
+            ],
+            "Northern": [
+              "Tamale Metropolitan",
+              "Savelugu",
+              "Yendi"
+            ],
+            "Oti": [
+              "Krachi East",
+              "Nkwanta South",
+              "Jasikan"
+            ],
+            "Savannah": [
+              "West Gonja",
+              "East Gonja",
+              "Bole"
+            ],
+            "Upper East": [
+              "Bolgatanga Municipal",
+              "Bawku Municipal",
+              "Kassena-Nankana Municipal"
+            ],
+            "Upper West": [
+              "Wa Municipal",
+              "Lawra",
+              "Sissala East"
+            ],
+            "Volta": [
+              "Ho Municipal",
+              "Keta",
+              "Hohoe"
+            ],
+            "Western": [
+              "Sekondi-Takoradi",
+              "Tarkwa-Nsuaem",
+              "Ahanta West"
+            ],
+            "Western North": [
+              "Sefwi Wiawso",
+              "Aowin",
+              "Bibiani-Anhwiaso-Bekwai"
+            ]
           }
         }
       },
