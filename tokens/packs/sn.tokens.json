@@ -14,10 +14,9 @@
       "strings": {
         "fr": {
           "banner": "Un site officiel de la République du Sénégal",
-          "banner-how": "Comment savoir que ce site est officiel",
+          "banner-how": "Comment reconnaître un site officiel",
           "banner-domain": "Les sites officiels utilisent .gouv.sn",
-          "banner-secure": "Les sites .gouv.sn sécurisés utilisent HTTPS",
-          "$note": "Drafted by a non-native speaker. Native review wanted."
+          "banner-secure": "Les sites .gouv.sn sécurisés utilisent HTTPS"
         },
         "en": {
           "banner": "An official website of the Republic of Senegal",
@@ -39,13 +38,13 @@
         "hint": "En francs CFA"
       },
       "id": {
-        "name": "Numéro d'identification nationale",
+        "name": "Numéro d’identification nationale",
         "short": "NIN",
-        "document": "Carte nationale d'identité CEDEAO",
-        "hint": "13 ou 14 chiffres, au verso de votre carte d'identité CEDEAO",
+        "document": "Carte nationale d’identité CEDEAO",
+        "hint": "13 ou 14 chiffres, au verso de votre carte d’identité CEDEAO",
         "length": 14,
         "pattern": "[0-9]{13,14}",
-        "authority": "la Direction de l'automatisation des fichiers"
+        "authority": "la Direction de l’automatisation des fichiers"
       },
       "regions": {
         "label": "Région",
