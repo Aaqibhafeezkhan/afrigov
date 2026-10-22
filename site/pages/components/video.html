@@ -13,8 +13,8 @@
 
 <h2>When not to use</h2>
 <p>
-  As a background, or set to play by itself. afrigov has no autoplaying or background video, for reasons of data, speed,
-  motion and contrast. See
+  As a background, or set to play by itself. afrigov has no autoplay or background video, for reasons of data,
+  speed, motion and contrast. See
   <a href="https://github.com/afrigov/afrigov/blob/main/project/decisions/004-no-autoplay-video.md">decision 004</a>.
   And never as the only place information lives: what the video says is also in its transcript.
 </p>
@@ -57,7 +57,8 @@
 <p>
   Set <code>data-ag-video</code> to a direct video file ending in <code>.mp4</code>, <code>.webm</code>,
   <code>.ogv</code>, <code>.ogg</code>, <code>.m4v</code> or <code>.mov</code>. The script uses a native
-  <code>&lt;video controls&gt;</code> player instead of an iframe. The poster's play action loads and starts the file.
+  <code>&lt;video controls&gt;</code> player instead of an iframe. The poster's play action loads and starts the
+  file.
 </p>
 <docs-example>
   <figure class="ag-video ag-mb-0">
@@ -132,7 +133,8 @@
 <ul>
   <li>
     The poster is a link to the video on its host. With the script, pressing it swaps in the player at the same size.
-    Embedded players start playing on press. Direct video files use native controls and an optional captions track.
+    Embedded players start playing on press. Direct video files use native controls and an optional captions
+    track.
     Without the script, the link opens the video file or host.
   </li>
   <li>
