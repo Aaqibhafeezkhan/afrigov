@@ -12,6 +12,7 @@
  */
 
 const WIDE = "(min-width: 64em)"; /* breakpoint.lg */
+const VIDEO_FILE = /\.(?:mp4|webm|ogv|ogg|m4v|mov)(?:[?#].*)?$/i;
 
 function toggles(scope) {
   const wide = window.matchMedia(WIDE);
@@ -131,19 +132,54 @@ function menus(scope) {
   document.addEventListener("click", (e) => all.forEach((m) => m.open && !m.contains(e.target) && (m.open = false)));
 }
 
+/** Return true when a URL points directly to a supported video file. */
+export function isVideoFile(src) {
+  return VIDEO_FILE.test(src.trim());
+}
+
 /**
- * Video: a link with data-ag-video="<embed URL>" becomes the player when pressed, so nothing
- * from the video host loads before someone chooses to watch. Without the script it is a link.
+ * Video: a link with data-ag-video="<embed URL or video file>" becomes a player when pressed,
+ * so nothing from the video host loads before someone chooses to watch. Without the script it is a link.
+ * Direct video files may provide a WebVTT captions file with data-ag-video-captions.
  */
 function videos(scope) {
   scope.querySelectorAll("a[data-ag-video]").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const src = link.getAttribute("data-ag-video");
+      const title = link.getAttribute("data-ag-video-title") || link.textContent.trim();
+
+      if (isVideoFile(src)) {
+        const video = document.createElement("video");
+        video.className = "ag-video__frame";
+        video.controls = true;
+        video.preload = "none";
+        video.playsInline = true;
+        video.setAttribute("aria-label", title);
+
+        const captions = link.getAttribute("data-ag-video-captions");
+        if (captions) {
+          const track = document.createElement("track");
+          track.kind = "captions";
+          track.src = captions;
+          track.srclang = link.getAttribute("data-ag-video-captions-lang") || "en";
+          track.label = link.getAttribute("data-ag-video-captions-label") || "English";
+          track.default = true;
+          video.append(track);
+        }
+
+        video.src = src;
+        link.replaceWith(video);
+        video.focus();
+        // The poster's play action is the user's choice to load and start the file.
+        video.play().catch(() => {});
+        return;
+      }
+
       const frame = document.createElement("iframe");
       frame.className = "ag-video__frame";
       frame.src = src + (src.includes("?") ? "&" : "?") + "autoplay=1";
-      frame.title = link.getAttribute("data-ag-video-title") || link.textContent.trim();
+      frame.title = title;
       frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
       frame.allowFullscreen = true;
       link.replaceWith(frame);
