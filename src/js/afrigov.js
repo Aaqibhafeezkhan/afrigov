@@ -146,8 +146,8 @@ function videos(scope) {
   scope.querySelectorAll("a[data-ag-video]").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      const src = link.getAttribute("data-ag-video");
-      const title = link.getAttribute("data-ag-video-title") || link.textContent.trim();
+      const src = link.dataset.agVideo;
+      const title = link.dataset.agVideoTitle || link.textContent.trim();
       const isFile = isVideoFile(src);
       const player = document.createElement(isFile ? "video" : "iframe");
       player.className = "ag-video__frame";
@@ -158,13 +158,13 @@ function videos(scope) {
         player.playsInline = true;
         player.setAttribute("aria-label", title);
 
-        const captions = link.getAttribute("data-ag-video-captions");
+        const captions = link.dataset.agVideoCaptions;
         if (captions) {
           const track = document.createElement("track");
           track.kind = "captions";
           track.src = captions;
-          track.srclang = link.getAttribute("data-ag-video-captions-lang") || "en";
-          track.label = link.getAttribute("data-ag-video-captions-label") || "English";
+          track.srclang = link.dataset.agVideoCaptionsLang || "en";
+          track.label = link.dataset.agVideoCaptionsLabel || "English";
           track.default = true;
           player.append(track);
         }
