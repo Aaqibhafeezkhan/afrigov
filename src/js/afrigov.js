@@ -148,14 +148,15 @@ function videos(scope) {
       e.preventDefault();
       const src = link.getAttribute("data-ag-video");
       const title = link.getAttribute("data-ag-video-title") || link.textContent.trim();
+      const isFile = isVideoFile(src);
+      const player = document.createElement(isFile ? "video" : "iframe");
+      player.className = "ag-video__frame";
 
-      if (isVideoFile(src)) {
-        const video = document.createElement("video");
-        video.className = "ag-video__frame";
-        video.controls = true;
-        video.preload = "none";
-        video.playsInline = true;
-        video.setAttribute("aria-label", title);
+      if (isFile) {
+        player.controls = true;
+        player.preload = "none";
+        player.playsInline = true;
+        player.setAttribute("aria-label", title);
 
         const captions = link.getAttribute("data-ag-video-captions");
         if (captions) {
@@ -165,25 +166,23 @@ function videos(scope) {
           track.srclang = link.getAttribute("data-ag-video-captions-lang") || "en";
           track.label = link.getAttribute("data-ag-video-captions-label") || "English";
           track.default = true;
-          video.append(track);
+          player.append(track);
         }
 
-        video.src = src;
-        link.replaceWith(video);
-        video.focus();
-        // The poster's play action is the user's choice to load and start the file.
-        video.play().catch(() => {});
-        return;
+        player.src = src;
+      } else {
+        player.src = src + (src.includes("?") ? "&" : "?") + "autoplay=1";
+        player.title = title;
+        player.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        player.allowFullscreen = true;
       }
 
-      const frame = document.createElement("iframe");
-      frame.className = "ag-video__frame";
-      frame.src = src + (src.includes("?") ? "&" : "?") + "autoplay=1";
-      frame.title = title;
-      frame.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
-      frame.allowFullscreen = true;
-      link.replaceWith(frame);
-      frame.focus();
+      link.replaceWith(player);
+      player.focus();
+      if (isFile) {
+        // The poster's play action is the user's choice to load and start the file.
+        player.play().catch(() => {});
+      }
     });
   });
 }
