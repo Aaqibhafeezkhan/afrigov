@@ -23,6 +23,8 @@ All notable changes to this project are documented here. The format follows
 
 - Senegal pack: document the national identification number on the reverse of the CEDEAO card (#13).
 
+- **Header documentation.** Show the long-brand, seven-link layout that can wrap at 1024px and clarify when to choose `ag-header--stacked`.
+
 ### Fixed
 
 - **Senegal flag artwork.** Add the green five-pointed star to the centre of the yellow band with a compact, hand-drawn SVG.
