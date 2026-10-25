@@ -18,7 +18,7 @@
   service's real data. The complete list remains available if JavaScript is disabled.
 </p>
 <docs-example>
-  <form class="ag-mb-5" id="office-filters" role="search" method="get" action="#office-list">
+  <form class="ag-mb-6" id="office-filters" role="search" method="get" action="#office-list">
     <div class="ag-field">
       <label class="ag-label" for="office-region">Region</label>
       <select class="ag-select" id="office-region" name="region">
@@ -106,10 +106,12 @@ const empty = document.querySelector("#office-empty");
 
 if (form && region && query && rows.length && count && empty) {
   empty.hidden = true;
-  function updateResults() {
+  let visible = 0;
+
+  function filterRows() {
     const selectedRegion = region.value.toLocaleLowerCase();
     const words = query.value.trim().toLocaleLowerCase();
-    let visible = 0;
+    visible = 0;
 
     rows.forEach((row) => {
       const matchesRegion =
@@ -120,12 +122,27 @@ if (form && region && query && rows.length && count && empty) {
       if (show) visible += 1;
     });
 
-    count.textContent = "Showing " + visible + (visible === 1 ? " office" : " offices");
     empty.hidden = visible !== 0;
   }
 
+  function announceCount() {
+    count.textContent = "Showing " + visible + (visible === 1 ? " office" : " offices");
+  }
+
+  function updateResults() {
+    filterRows();
+    announceCount();
+  }
+
   region.addEventListener("change", updateResults);
-  query.addEventListener("input", updateResults);
+  // The rows hide as you type, but the count waits until you stop: a polite live region
+  // rewritten on every keystroke talks over itself.
+  let typing;
+  query.addEventListener("input", () => {
+    filterRows();
+    clearTimeout(typing);
+    typing = setTimeout(announceCount, 500);
+  });
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     updateResults();
@@ -156,7 +173,8 @@ if (form && region && query && rows.length && count && empty) {
   <li>Give each control a visible label. Do not use placeholder text as the only label.</li>
   <li>
     Put the result count in a persistent element with <code>role="status"</code>. Update it after filtering so screen
-    readers announce the new count without moving focus.
+    readers announce the new count without moving focus. When people are typing, wait until they pause before updating
+    it: a live region rewritten on every keystroke talks over itself.
   </li>
   <li>Use real table captions and header scopes, or a semantic list if the information is not tabular.</li>
   <li>Do not move focus when rows change. Keep keyboard focus on the control the person is using.</li>
