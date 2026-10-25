@@ -56,7 +56,7 @@
 <h2>Direct video file</h2>
 <p>
   Set <code>data-ag-video</code> to a direct video file ending in <code>.mp4</code>, <code>.webm</code>,
-  <code>.ogv</code>, <code>.ogg</code>, <code>.m4v</code> or <code>.mov</code>. The script uses a native
+  <code>.ogv</code>, <code>.m4v</code> or <code>.mov</code>. The script uses a native
   <code>&lt;video controls&gt;</code> player instead of an iframe. The poster's play action loads and starts the file.
 </p>
 <docs-example>
@@ -86,8 +86,12 @@
 <p>
   The captions file is optional. When supplied, use a WebVTT (<code>.vtt</code>) file. Set
   <code>data-ag-video-captions-lang</code> to its BCP 47 language code and <code>data-ag-video-captions-label</code> to
-  the language name; these default to <code>en</code> and <code>English</code>. Keep the poster and captions file on
-  your own site when possible.
+  the language name; both default to the page's own <code>lang</code>. Keep the poster and captions file on your own
+  site when possible.
+</p>
+<p class="docs-fine">
+  The videos in both examples are placeholders. Replace VIDEO_ID with your video's ID, and the
+  <code>/media/</code> paths with your own video and captions files.
 </p>
 
 <h2>Video cards</h2>

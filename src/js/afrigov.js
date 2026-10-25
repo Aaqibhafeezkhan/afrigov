@@ -12,7 +12,8 @@
  */
 
 const WIDE = "(min-width: 64em)"; /* breakpoint.lg */
-const VIDEO_FILE = /\.(?:mp4|webm|ogv|ogg|m4v|mov)(?:[?#].*)?$/i;
+/* .ogv, not .ogg: an Ogg file with a video track carries .ogv, while .ogg is audio. */
+const VIDEO_FILE = /\.(?:mp4|webm|ogv|m4v|mov)(?:[?#].*)?$/i;
 
 function toggles(scope) {
   const wide = window.matchMedia(WIDE);
@@ -163,8 +164,11 @@ function videos(scope) {
           const track = document.createElement("track");
           track.kind = "captions";
           track.src = captions;
-          track.srclang = link.dataset.agVideoCaptionsLang || "en";
-          track.label = link.dataset.agVideoCaptionsLabel || "English";
+          // The page's own language, not English: a pack may be serving Arabic, French or
+          // Kiswahili, and captions announced in the wrong language are worse than none.
+          const lang = link.dataset.agVideoCaptionsLang || document.documentElement.lang || "en";
+          track.srclang = lang;
+          track.label = link.dataset.agVideoCaptionsLabel || lang;
           track.default = true;
           player.append(track);
         }
