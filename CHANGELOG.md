@@ -8,6 +8,8 @@ All notable changes to this project are documented here. The format follows
 
 ### Added
 
+- **Direct video files.** The video enhancement detects common video file extensions, uses a native controls-enabled player, and supports an optional WebVTT captions track. The file is only requested after the visitor chooses to play it (#31).
+
 - **Contents list.** `ag-contents` is a labelled navigation region with a short heading and in-page
   links, styled with muted link colour for long pages. Works with ordinary anchors and no JavaScript.
 
