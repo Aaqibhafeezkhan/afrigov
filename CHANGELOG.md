@@ -10,6 +10,11 @@ All notable changes to this project are documented here. The format follows
 
 - **Find one entry in a long list.** Documents a region selector and text filter above a long list, including server-side fallback, accessible result announcements and a no-results state.
 
+- **Direct video files.** The video enhancement detects common video file extensions, uses a native controls-enabled player, and supports an optional WebVTT captions track. The file is only requested after the visitor chooses to play it (#31).
+
+- **Contents list.** `ag-contents` is a labelled navigation region with a short heading and in-page
+  links, styled with muted link colour for long pages. Works with ordinary anchors and no JavaScript.
+
 - **Tanzania country pack (`tz.css`).** Adds Tanzania's national flag and an original 3:2 SVG drawn from the statutory design, English official-website banner strings, a machine-assisted Kiswahili draft marked for native review, TZS currency, NIN details, +255 phone information and sample regions. Colour-name sources are cited in the pack.
 
 - **Uganda country pack (`ug.css`).** Adds the six-band flag fallback, official English banner strings, UGX currency, NIRA National Identification Number details, +256 phone information and regional examples. Colour sources are cited in the pack.
