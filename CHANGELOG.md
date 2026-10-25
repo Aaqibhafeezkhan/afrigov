@@ -8,6 +8,8 @@ All notable changes to this project are documented here. The format follows
 
 ### Added
 
+- **Find one entry in a long list.** Documents a region selector and text filter above a long list, including server-side fallback, accessible result announcements and a no-results state.
+
 - **Direct video files.** The video enhancement detects common video file extensions, uses a native controls-enabled player, and supports an optional WebVTT captions track. The file is only requested after the visitor chooses to play it (#31).
 
 - **Contents list.** `ag-contents` is a labelled navigation region with a short heading and in-page
